@@ -1,0 +1,76 @@
+.slider {
+    /* 부모요소로 지정 */
+    position: relative;
+    /* 이 요소의 영역을 넘어가면 보이지 않음 */
+    overflow: hidden;
+    /* 가로 넓이 */
+    width: 600px;
+    /* 세로 넓이 */
+    height: 400px;
+}
+
+.slide {
+    /* 부모요소 따라 위치 */
+    position: absolute;
+    /* 상단 고정 */
+    top: 0;
+    /* 좌측 고정 */
+    left: 0;
+    /* 부모요소의 가로폭에 맞춤 */
+    width: 100%;
+    /* 부모요소의 세로폭에 맞춤 */
+    height: 100%;
+    /* slider의 애니메이션을 6초 동안 실행하고 무한으로 반복하며
+    일정한 속도로 진행한다. */
+    animation: slider 0.4s infinite linear;
+    /* 글자 가운데 정렬 글자 크기 굵기 등등 */
+    text-align: center;
+    line-height: 400px;
+    font-size: 48px;
+    font-weight: 600;
+}
+
+.slide:nth-child(1) {
+    /* 배경 색 초록 */
+    background: green;
+    /* slide요소에 대한 애니메이션 바로 시작 */
+    animation-delay: 0;
+}
+.slide:nth-child(2) {
+    /* 배경 색 하늘 */
+    background: skyblue;
+    /* slide요소에 대한 애니메이션 2초 후 시작 */
+    animation-delay: 0.1s;
+}
+.slide:nth-child(3) {
+    /* 동일 */
+    background: yellowgreen;
+    animation-delay: 0.2s;
+}
+
+.slide:nth-child(4) {
+    /* 동일 */
+    background: lightseagreen;
+    animation-delay: 0.3s;
+}
+
+@keyframes slider {
+    0% {
+    transform: translateX(0);
+    }
+
+    10% {
+    transform: translateX(0);
+    }
+    25% {
+    transform: translateX(-100%);
+    animation-timing-function: step-end;
+    }
+    85% {
+    transform: translateX(100%);
+    }
+
+    100% {
+    transform: translateX(0);
+    }
+}
