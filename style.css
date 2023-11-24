@@ -22,7 +22,7 @@
     height: 100%;
     /* slider의 애니메이션을 6초 동안 실행하고 무한으로 반복하며
     일정한 속도로 진행한다. */
-    animation: slider 0.4s infinite linear;
+    animation: slider 6s infinite linear;
     /* 글자 가운데 정렬 글자 크기 굵기 등등 */
     text-align: center;
     line-height: 400px;
@@ -40,33 +40,32 @@
     /* 배경 색 하늘 */
     background: skyblue;
     /* slide요소에 대한 애니메이션 2초 후 시작 */
-    animation-delay: 0.1s;
+    animation-delay: 2s;
 }
 .slide:nth-child(3) {
     /* 동일 */
     background: yellowgreen;
-    animation-delay: 0.2s;
+    animation-delay: 4s;
 }
 
-.slide:nth-child(4) {
-    /* 동일 */
+/* .slide:nth-child(4) {
     background: lightseagreen;
-    animation-delay: 0.3s;
-}
+    animation-delay: 3s;
+} */
 
 @keyframes slider {
     0% {
     transform: translateX(0);
     }
 
-    10% {
+    26% {
     transform: translateX(0);
     }
-    25% {
+    33% {
     transform: translateX(-100%);
     animation-timing-function: step-end;
     }
-    85% {
+    93% {
     transform: translateX(100%);
     }
 
