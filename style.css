@@ -7,26 +7,25 @@
     width: 600px;
     /* 세로 넓이 */
     height: 400px;
+    /* 걍 가운데 고정 */
     left: 0;
     right: 0;
     margin: auto;
     margin-top: 12%;
+    border-radius: 20px;
+    border: 5px solid black;
 }
 
 .slide {
     /* 부모요소 따라 위치 */
     position: absolute;
-    /* 상단 고정 */
-    top: 0;
-    /* 좌측 고정 */
-    left: 0;
     /* 부모요소의 가로폭에 맞춤 */
     width: 100%;
     /* 부모요소의 세로폭에 맞춤 */
     height: 100%;
     /* slider의 애니메이션을 6초 동안 실행하고 무한으로 반복하며
     일정한 속도로 진행한다. */
-    animation: slider 6s infinite linear;
+    animation: slider 5s infinite linear;
     /* 글자 가운데 정렬 글자 크기 굵기 등등 */
     text-align: center;
     line-height: 400px;
@@ -38,23 +37,28 @@
     /* 배경 색 초록 */
     background: green;
     /* slide요소에 대한 애니메이션 바로 시작 */
-    animation-delay: 0;
+    animation-delay: 0s; 
 }
 .slide:nth-child(2) {
     /* 배경 색 하늘 */
     background: skyblue;
-    /* slide요소에 대한 애니메이션 2초 후 시작 */
-    animation-delay: 2s;
+    /* slide요소에 대한 애니메이션 ?초 후 시작 */
+    animation-delay: 1.25s;
 }
 .slide:nth-child(3) {
     /* 동일 */
     background: yellowgreen;
-    animation-delay: 4s;
+    animation-delay: 2.5s;
 }
 
-/* .slide:nth-child(4) {
+.slide:nth-child(4) {
     background: lightseagreen;
-    animation-delay: 3s;
+    animation-delay: 3.75s;
+}
+
+/* .slide:nth-child(5) {
+    background: pink;
+    animation-delay: 4s;
 } */
 
 @keyframes slider {
@@ -62,13 +66,15 @@
     transform: translateX(0);
     }
 
-    26% {
-    transform: translateX(0);
+    18% {
+    transform: translateX(0%);
     }
-    33% {
+
+    25% {
     transform: translateX(-100%);
     animation-timing-function: step-end;
     }
+
     93% {
     transform: translateX(100%);
     }
@@ -77,3 +83,26 @@
     transform: translateX(0);
     }
 }
+
+/* @keyframes slider {
+    0% {
+    transform: translateX(0);
+    }
+
+    25% {
+    transform: translateX(-100%);
+    animation-timing-function: step-end;
+    }
+
+    25% {
+    transform: translateX(100%);
+    }
+
+    75% {
+    transform: translateX(100%);
+    }
+
+    100% {
+    transform: translateX(0);
+    }
+} */
